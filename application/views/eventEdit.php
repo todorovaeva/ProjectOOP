@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  
-<title>SIMPLE CRUD APPLICATION</title>
+<title>Administration</title>
  
 <link href="<?php echo base_url(); ?>style/style.css" rel="stylesheet" type="text/css" />
  
@@ -44,28 +44,28 @@
                 <td valign="top">Start Date (dd-mm-yyyy)<span style="color:red;">*</span></td>
                 <td><input type="text" name="dob" onclick="displayDatePicker('dob');" class="text" value="<?php echo $this->validation->dob; ?>"/>
                 <a href="javascript:void(0);" onclick="displayDatePicker('dob');"><img src="<?php echo base_url(); ?>style/images/calendar.png" alt="calendar" border="0"></a>
-                <?php echo $this->validation->dob_error; ?></td>
+                </td>
             </tr>
 
             <tr>
                 <td valign="top">End Date (dd-mm-yyyy)<span style="color:red;">*</span></td>
                 <td><input type="text" name="end" onclick="displayDatePicker('end');" class="text" value="<?php echo $this->validation->end; ?>"/>
                 <a href="javascript:void(0);" onclick="displayDatePicker('end');"><img src="<?php echo base_url(); ?>style/images/calendar.png" alt="calendar" border="0"></a>
-                <?php echo $this->validation->end_error; ?></td>
+                </td>
             </tr>
             <tr>
                 <td valign="top">EVENT Image1<span style="color:red;">*</span></td>
-                <td><input type="file" name="image1"  value=""/>
+                <td><input type="file" name="image1"  value="<?php echo $this->validation->image1; ?>"/>
                 </td>
             </tr>
             <tr>
                 <td valign="top">EVENT Image2<span style="color:red;">*</span></td>
-                <td><input type="file" name="image2"  value=""/>
+                <td><input type="file" name="image2"  value="<?php echo $this->validation->image2; ?>"/>
                 </td>
             </tr>
             <tr>
                 <td valign="top">EVENT Image3<span style="color:red;">*</span></td>
-                <td><input type="file" name="image3"  value=""/>
+                <td><input type="file" name="image3"  value="<?php echo $this->validation->image3; ?>"/><a href ><img src="<?php echo base_url(); ?>style/uploads/></a>
                 </td>
             </tr>
             <tr>

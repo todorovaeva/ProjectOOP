@@ -13,7 +13,7 @@ class Event extends CI_Controller {
         // load library
         $this->load->library(array('table','validation'));
 
-        //$this->load->library('validation');
+        $this->load->library('validation');
          
         // load helper
         $this->load->helper('url');
@@ -231,17 +231,16 @@ class Event extends CI_Controller {
     }
      
     // date_validation callback
-    function valid_date($str)
-    {
-        if(!ereg("^(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-([0-9]{4})$", $str))
-        {
-            $this->validation->set_message('valid_date', 'date format is not valid. dd-mm-yyyy');
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
+    // function valid_date($str)
+    // {
+    //     if(!ereg("^(0[1-9]|1[0-9]|2[0-9]|3[01])-(0[1-9]|1[012])-([0-9]{4})$", $str))
+    //     {
+    //         $this->validation->set_message('valid_date', 'date format is not valid. dd-mm-yyyy');
+    //         return false;
+    //     }
+    //     else
+    //     {
+    //         return true;
+    //     }
+    // }
 }
-?>

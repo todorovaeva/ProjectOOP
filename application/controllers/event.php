@@ -14,6 +14,7 @@ class Event extends CI_Controller {
         $this->load->library(array('table','validation'));
 
         $this->load->library('validation');
+        $this->load->library('upload');
          
         // load helper
         $this->load->helper('url');
@@ -99,9 +100,9 @@ class Event extends CI_Controller {
                             'descr' => $this->input->post('descr'),
                             'dob' => date('Y-m-d', strtotime($this->input->post('dob'))),
                             'end' => date('Y-m-d', strtotime($this->input->post('end'))),
-                            'image1' => $this->input->post('image1'),
-                            'image2' => $this->input->post('image2'),
-                            'image3' => $this->input->post('image3'),
+                            'image1' => $this->upload->do_upload('image1'),
+                            'image2' => $this->upload->do_upload('image2'),
+                            'image3' => $this->upload->do_upload('image3'),
                             );
             $id = $this->eventModel->save($event);
              

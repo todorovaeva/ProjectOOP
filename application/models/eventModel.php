@@ -34,6 +34,6 @@ class EventModel extends CI_Model {
     // delete event by id
     function delete($id){
         $this->db->where('id', $id);
-        $this->db->delete($this->tbl_person);|
+        $this->db->delete($this->tbl_person);
     }
 }
